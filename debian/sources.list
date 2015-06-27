@@ -2,7 +2,8 @@
 #
 # Debian 8.x+ (CDN Mirror)
 # nginx 1.8+ (DotDeb)
-# redis 3.0+ (DotDeb)
+# Redis 3.0+ (DotDeb)
+# Cassandra 2.1+ (DataStax)
 # RethinkDB 2.0+ (Official)
 #
 ###
@@ -17,6 +18,12 @@ deb http://security.debian.org/ jessie/updates main contrib non-free
 # apt-get -Vu install php5-cli php5-curl php5-fpm php5-gd php5-imagick php5-mcrypt php5-mysql php5-redis
 # apt-get -Vu install redis-server
 deb http://packages.dotdeb.org jessie all
+
+# Cassandra
+# wget http://debian.datastax.com/debian/repo_key; apt-key add repo_key
+# apt-get -Vu install cassandra
+# apt-get -Vu install dsc20
+deb http://debian.datastax.com/community stable main
 
 # RethinkDB
 # wget http://download.rethinkdb.com/apt/pubkey.gpg; apt-key add pubkey.gpg
