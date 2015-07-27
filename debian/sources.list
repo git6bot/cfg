@@ -30,4 +30,9 @@ deb http://debian.datastax.com/community stable main
 # apt-get -Vu install rethinkdb
 deb http://download.rethinkdb.com/apt jessie main
 
+# PostgreSQL
+# wget https://www.postgresql.org/media/keys/ACCC4CF8.asc; apt-key add ACCC4CF8.asc
+# apt-get -Vu install postgresql-9.4
+deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main
+
 # apt-get update; apt-get -Vu upgrade; apt-get clean
