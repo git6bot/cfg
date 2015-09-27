@@ -9,7 +9,7 @@ deb http://cdn.debian.net/debian/ jessie main contrib non-free
 deb http://security.debian.org/ jessie/updates main contrib non-free
 
 # Debian Backports // nginx 1.9+ - redis 3.0+
-# aptitude -t jessie-backports install nginx redis-server
+# apt-get -Vu -t jessie-backports install nginx redis-server
 deb http://http.debian.net/debian jessie-backports main
 
 # RethinkDB 2.1+
@@ -17,8 +17,7 @@ deb http://http.debian.net/debian jessie-backports main
 # apt-get -Vu install rethinkdb
 deb http://download.rethinkdb.com/apt jessie main
 
-# Cassandra 2.1+ (2.2+)
+# Cassandra 2.2+
 # wget http://debian.datastax.com/debian/repo_key; apt-key add repo_key
-# apt-get -Vu install cassandra
-# apt-get -Vu install dsc20
+# apt-get -Vu install openjdk-7-jre-headless cassandra
 deb http://debian.datastax.com/community stable main
