@@ -1,38 +1,24 @@
 ###
-#
-# Debian 8.x+ (CDN Mirror)
-# nginx 1.8+ (DotDeb)
-# Redis 3.0+ (DotDeb)
-# Cassandra 2.1+ (DataStax)
-# RethinkDB 2.0+ (Official)
-#
+# Debian Jessie // Debian Backports
+# RethinkDB // Cassandra
 ###
 
-# Debian
+# Debian Jessie // PHP 5.6+
+# apt-get -Vu install php5-cli php5-curl php5-fpm php5-gd php5-imagick php5-mcrypt php5-mysql php5-redis
 deb http://cdn.debian.net/debian/ jessie main contrib non-free
 deb http://security.debian.org/ jessie/updates main contrib non-free
 
-# DotDeb
-# wget http://www.dotdeb.org/dotdeb.gpg; apt-key add dotdeb.gpg
-# apt-get -Vu install nginx
-# apt-get -Vu install php5-cli php5-curl php5-fpm php5-gd php5-imagick php5-mcrypt php5-mysql php5-redis
-# apt-get -Vu install redis-server
-deb http://packages.dotdeb.org jessie all
+# Debian Backports // nginx 1.9+ - redis 3.0+
+# aptitude -t jessie-backports install nginx redis-server
+deb http://http.debian.net/debian jessie-backports main
 
-# Cassandra
-# wget http://debian.datastax.com/debian/repo_key; apt-key add repo_key
-# apt-get -Vu install cassandra
-# apt-get -Vu install dsc20
-deb http://debian.datastax.com/community stable main
-
-# RethinkDB
+# RethinkDB 2.1+
 # wget http://download.rethinkdb.com/apt/pubkey.gpg; apt-key add pubkey.gpg
 # apt-get -Vu install rethinkdb
 deb http://download.rethinkdb.com/apt jessie main
 
-# PostgreSQL
-# wget https://www.postgresql.org/media/keys/ACCC4CF8.asc; apt-key add ACCC4CF8.asc
-# apt-get -Vu install postgresql-9.4
-deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main
-
-# apt-get update; apt-get -Vu upgrade; apt-get clean
+# Cassandra 2.1+ (2.2+)
+# wget http://debian.datastax.com/debian/repo_key; apt-key add repo_key
+# apt-get -Vu install cassandra
+# apt-get -Vu install dsc20
+deb http://debian.datastax.com/community stable main
